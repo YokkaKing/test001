@@ -4,7 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - object
+  - test1
+  - test2
+  - SubCamera
+  - SubCameraChild
   layers:
   - Default
   - TransparentFX
@@ -12,7 +15,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - SubCamera
   - 
   - 
   - 
