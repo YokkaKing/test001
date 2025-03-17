@@ -8,6 +8,8 @@ TagManager:
   - test2
   - SubCamera
   - SubCameraChild
+  - object
+  - Action
   layers:
   - Default
   - TransparentFX
