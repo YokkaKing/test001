@@ -9,27 +9,33 @@ public class CheakGoalScript : MonoBehaviour
     private GameObject subCameraObject;
 
     public AudioClip ShutterSound;
-    AudioSource audioSource;
+    private AudioSource audioSource;
+
+    private SubCameraScript subCameraScript; // OtherScriptへの参照
 
     void Start() {
         // サブカメラオブジェクトを取得
         subCameraObject = GameObject.FindGameObjectWithTag(subCameraTag);
 
         audioSource = gameObject.AddComponent<AudioSource>();
+        // SubCameraScriptコンポーネントを持つオブジェクトを検索して取得
+        subCameraScript = FindObjectOfType<SubCameraScript>();
     }
 
     void Update() {
-        if (Input.GetMouseButtonDown(0)) // 右クリックで
-        {
-            audioSource.clip = ShutterSound;
-            audioSource.Play();
+        if (!subCameraScript.isSubCameraActive) {
+            if (Input.GetMouseButtonDown(1)) // 右クリックで
+{
+                audioSource.clip = ShutterSound;
+                audioSource.Play();
 
-            if (subCameraObject != null) {
-                bool tag1Overlapping = IsTagOverlapping(tag1); // tag1が重なっているかチェックするで
-                bool tag2Overlapping = IsTagOverlapping(tag2); // tag2が重なっているかチェックするんや
+                if (subCameraObject != null) {
+                    bool tag1Overlapping = IsTagOverlapping(tag1); // tag1が重なっているかチェックするで
+                    bool tag2Overlapping = IsTagOverlapping(tag2); // tag2が重なっているかチェックするんや
 
-                if (tag1Overlapping && tag2Overlapping) { // 両方のタグが重なっているか確認するで
-                    Debug.Log("クリア！");  // 後でクリア処理
+                    if (tag1Overlapping && tag2Overlapping) { // 両方のタグが重なっているか確認するで
+                        Debug.Log("クリア！");  // 後でクリア処理
+                    }
                 }
             }
         }
