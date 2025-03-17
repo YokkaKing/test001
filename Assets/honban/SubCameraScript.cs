@@ -22,9 +22,6 @@ public class SubCameraScript : MonoBehaviour {
     }
 
     private void SetSubCameraObjectsActive(bool isActive) {
-        //foreach (GameObject obj in subCameraObjects) {
-        //    obj.SetActive(isActive);
-        //}
         for (int i = 0; i < subCameraObjects.Length; i++) {
             GameObject obj = subCameraObjects[i];
             obj.SetActive(isActive);
