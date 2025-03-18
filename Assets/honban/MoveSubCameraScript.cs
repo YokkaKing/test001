@@ -21,9 +21,9 @@ public class MoveSubCameraScript : MonoBehaviour
         worldPosition.y = Mathf.Clamp(worldPosition.y, -3.2f, 3.2f);
 
         // すべてのサブカメラオブジェクトをマウスの位置に移動
-        foreach (GameObject obj in subCameraObjects) {
-            Vector3 newPosition = new Vector3(worldPosition.x, worldPosition.y, obj.transform.position.z);
-            obj.transform.position = newPosition;
+        for (int i = 0; i < subCameraObjects.Length; i++) {
+            Vector3 newPosition = new Vector3(worldPosition.x, worldPosition.y, subCameraObjects[i].transform.position.z);
+            subCameraObjects[i].transform.position = newPosition;
         }
     }
 }

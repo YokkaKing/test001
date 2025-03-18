@@ -1,8 +1,11 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SubCameraScript : MonoBehaviour {
     private GameObject[] subCameraObjects;
     public bool isSubCameraActive;
+
+    public Button toggleButton; // ボタンを指定
 
     void Start() {
         // タグを使ってすべてのカメラオブジェクトを取得
@@ -10,21 +13,12 @@ public class SubCameraScript : MonoBehaviour {
 
         // 初期設定として SubCamera を無効にする
         isSubCameraActive = false;
-        SetSubCameraObjectsActive(isSubCameraActive);
+        SetSubCameraObjectsActive();
     }
 
-    void Update() {
-        // Mキーが押されたときにカメラを切り替える
-        if (Input.GetKeyDown(KeyCode.M)) {
-            isSubCameraActive = !isSubCameraActive;
-            SetSubCameraObjectsActive(isSubCameraActive);
-        }
-    }
-
-    private void SetSubCameraObjectsActive(bool isActive) {
-        //foreach (GameObject obj in subCameraObjects) {
-        //    obj.SetActive(isActive);
-        //}
+    public void SetSubCameraObjectsActive() {
+        bool isActive = isSubCameraActive;
+        isSubCameraActive = !isSubCameraActive;
         for (int i = 0; i < subCameraObjects.Length; i++) {
             GameObject obj = subCameraObjects[i];
             obj.SetActive(isActive);
