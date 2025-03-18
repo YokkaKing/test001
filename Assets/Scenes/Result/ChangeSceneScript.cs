@@ -5,10 +5,12 @@ using System.Collections;
 public class ChangeSceneScript : MonoBehaviour {
 
     private CheakGoalScript cheakGoalScript;
+    private CheakGoalScript2 cheakGoalScript2;
 
     void Start() {
         // CheakGoalScriptを持つオブジェクトを探して参照
         cheakGoalScript = FindObjectOfType<CheakGoalScript>();
+        cheakGoalScript2 = FindObjectOfType<CheakGoalScript2>();
     }
 
     void OnMouseDown() {
@@ -31,7 +33,11 @@ public class ChangeSceneScript : MonoBehaviour {
     }
 
     public void NextScene() {
-        SceneManager.LoadScene(cheakGoalScript.nextScene);
+        if (cheakGoalScript != null) {
+            SceneManager.LoadScene(cheakGoalScript.nextScene);
+        } else {
+            SceneManager.LoadScene(cheakGoalScript2.nextScene);
+        }
     }
 
     private IEnumerator UnloadResultSceneAndReload(string sceneName) {
