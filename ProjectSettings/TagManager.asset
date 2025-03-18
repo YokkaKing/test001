@@ -17,6 +17,8 @@ TagManager:
   - Button
   - Reload
   - Next
+  - touch3
+  - touch4
   layers:
   - Default
   - TransparentFX
