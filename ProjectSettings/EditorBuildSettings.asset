@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/honban/CameraTestScene.unity
+    path: Assets/honban/Scene/CameraTestScene.unity
     guid: d274e89831e99934a97a22f85aa4a50d
+  - enabled: 1
+    path: Assets/honban/Scene/ResultScene.unity
+    guid: cf1cea59724eec643b617b0519f9114d
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
