@@ -15,6 +15,8 @@ TagManager:
   - touch2
   - camera
   - Button
+  - Reload
+  - Next
   - touch3
   - touch4
   layers:

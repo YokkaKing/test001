@@ -8,6 +8,7 @@ public class CheakGoalScript : MonoBehaviour
     public string nextScene = "test"; // チェックするタグ2
 
     private GameObject subCameraObject;
+    private SubCameraScript subCameraScript; // 他のScriptへの参照
 
     public AudioClip ShutterSound;
     private AudioSource audioSource;
@@ -17,6 +18,8 @@ public class CheakGoalScript : MonoBehaviour
         subCameraObject = GameObject.FindGameObjectWithTag("SubCamera");
 
         audioSource = gameObject.AddComponent<AudioSource>();
+        // SubCameraScriptコンポーネントを持つオブジェクトを検索して取得
+        subCameraScript = FindObjectOfType<SubCameraScript>();
     }
 
     void Update() {
@@ -35,6 +38,7 @@ public class CheakGoalScript : MonoBehaviour
                     bool tag2Overlapping = IsTagOverlapping(tag2); // tag2が重なっているかチェックするんや
                     if (tag1Overlapping && tag2Overlapping && VarScripts.ACTION) { // 両方のタグが重なっているか確認するで
                         Debug.Log("clear!");
+                        subCameraScript.SetSubCameraObjectsActive();
                         SceneManager.LoadSceneAsync("ResultScene", LoadSceneMode.Additive);  // リザルトシーンに移動
                     }
                 }
