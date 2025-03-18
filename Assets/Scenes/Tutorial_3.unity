@@ -836,7 +836,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.56}
+  m_Offset: {x: 0, y: 0.81}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -847,7 +847,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.82, y: 3.5}
+  m_Size: {x: 1.78, y: 1.85}
   m_EdgeRadius: 0
 --- !u!1 &894658489
 GameObject:
@@ -875,7 +875,7 @@ Transform:
   m_GameObject: {fileID: 894658489}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.023105657, y: 0.080000766, z: 0}
+  m_LocalPosition: {x: -0.0326, y: 0.0671, z: 0}
   m_LocalScale: {x: 0.020833334, y: 0.037037037, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -924,7 +924,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.11, y: 0.89}
+  m_Size: {x: 0.28, y: 0.14}
   m_EdgeRadius: 0
 --- !u!1 &948953992
 GameObject:
@@ -2017,7 +2017,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tag1: test1
   tag2: test2
-  nextScene: test
+  nextScene: Stage_1
   ShutterSound: {fileID: 8300000, guid: 898b3ee9f8a354f45aca59137e102b06, type: 3}
 --- !u!114 &1773515993
 MonoBehaviour:
@@ -2448,9 +2448,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.050387025
+    y: 0
     width: 1
-    height: 0.89922595
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
