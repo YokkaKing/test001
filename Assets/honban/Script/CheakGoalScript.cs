@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class CheakGoalScript : MonoBehaviour
 {
-    //public string subCameraTag = "SubCamera"; // サブカメラのタグ名
     public string tag1 = "test1"; // チェックするタグ1
     public string tag2 = "test2"; // チェックするタグ2
     public string nextScene = "test"; // チェックするタグ2
@@ -27,10 +26,14 @@ public class CheakGoalScript : MonoBehaviour
                 audioSource.clip = ShutterSound;
                 audioSource.Play();
 
+                if (subCameraObject == null) {
+                    Debug.Log("ERROR");
+                }
+
                 if (subCameraObject != null) {
                     bool tag1Overlapping = IsTagOverlapping(tag1); // tag1が重なっているかチェックするで
                     bool tag2Overlapping = IsTagOverlapping(tag2); // tag2が重なっているかチェックするんや
-                    if (tag1Overlapping && tag2Overlapping) { // 両方のタグが重なっているか確認するで
+                    if (tag1Overlapping && tag2Overlapping && VarScripts.ACTION) { // 両方のタグが重なっているか確認するで
                         Debug.Log("clear!");
                         SceneManager.LoadSceneAsync("ResultScene", LoadSceneMode.Additive);  // リザルトシーンに移動
                     }
