@@ -4,11 +4,20 @@ using System.Collections;
 
 public class ChangeSceneScript : MonoBehaviour {
 
-    public CheakGoalScript cheakGoalScript;
+    private CheakGoalScript cheakGoalScript;
 
     void Start() {
         // CheakGoalScriptを持つオブジェクトを探して参照
         cheakGoalScript = FindObjectOfType<CheakGoalScript>();
+    }
+
+    void OnMouseDown() {
+        // 自分自身のタグが"ReStart"だったらシーンをロード
+        if (gameObject.CompareTag("Reload")) {
+            ReloadScene();
+        } else if (gameObject.CompareTag("Next")) {
+            NextScene();
+        }
     }
 
     public void LoadScene(string sceneName) {
