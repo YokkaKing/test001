@@ -18,6 +18,7 @@ public class ChangeSceneScript : MonoBehaviour {
     public void ReloadScene() {
         string currentSceneName = SceneManager.GetActiveScene().name;
         StartCoroutine(UnloadResultSceneAndReload(currentSceneName));
+        SceneManager.LoadScene(currentSceneName);
     }
 
     public void NextScene() {
