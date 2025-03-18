@@ -286,7 +286,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: ddf0869b05677764abec5978ba30540c, type: 3}
     m_FontSize: 65
     m_FontStyle: 0
     m_BestFit: 0
@@ -538,7 +538,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: ddf0869b05677764abec5978ba30540c, type: 3}
     m_FontSize: 65
     m_FontStyle: 0
     m_BestFit: 0
@@ -705,6 +705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f91e386868614e45aa1c0578228bab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cheakGoalScript: {fileID: 0}
 --- !u!1 &1632940433
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,6 +852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f91e386868614e45aa1c0578228bab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cheakGoalScript: {fileID: 0}
 --- !u!1 &1680056046
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,7 +911,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: ddf0869b05677764abec5978ba30540c, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -1076,6 +1078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f91e386868614e45aa1c0578228bab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cheakGoalScript: {fileID: 0}
 --- !u!1 &1811496023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,7 +1137,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: ddf0869b05677764abec5978ba30540c, type: 3}
     m_FontSize: 65
     m_FontStyle: 0
     m_BestFit: 0
