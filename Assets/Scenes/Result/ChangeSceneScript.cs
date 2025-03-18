@@ -6,6 +6,11 @@ public class ChangeSceneScript : MonoBehaviour {
 
     public CheakGoalScript cheakGoalScript;
 
+    void Start() {
+        // CheakGoalScriptを持つオブジェクトを探して参照
+        cheakGoalScript = FindObjectOfType<CheakGoalScript>();
+    }
+
     public void LoadScene(string sceneName) {
         SceneManager.LoadScene(sceneName);
     }
