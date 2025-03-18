@@ -1,35 +1,62 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class MouseController : MonoBehaviour
 {
+    private GameObject draggableObject; // 現在ドラッグ中のオブジェクト
+    private bool isDragging = false; // ドラッグ中かどうか
+    private Vector2 offset; // マウスとオブジェクトの距離の差分
+
+    private Vector2 startPosition; // 初期位置を保存する変数
+    private Vector2 currentPosition; // 現在の位置を取得
+
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // 左クリック
-        {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); // マウス座標をワールド座標に変換
-            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero); // クリック位置にレイを飛ばす
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); // マウスのワールド座標
+        currentPosition = draggableObject ? draggableObject.transform.position : Vector2.zero;
 
-            if (hit.collider != null && hit.collider.CompareTag("object")) // タグが "object" なら
+        // 左クリックを押した瞬間
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero); // マウスからrayを発射
+
+            if (hit.collider != null && hit.collider.CompareTag("object")) // クリックしたオブジェクトが"object"タグか
             {
-                OnClick(hit.collider.gameObject); // クリックされたオブジェクトを渡す
+                draggableObject = hit.collider.gameObject; // ドラッグ対象オブジェクトを設定
+                isDragging = true; // ドラッグ中
+                offset = (Vector2)draggableObject.transform.position - mousePosition; // クリック位置との差分を取得
+
+                startPosition = hit.transform.position;
             }
-            else if (hit.collider == null)
+        }
+
+        // 左クリックを押し続けている間
+        if (Input.GetMouseButton(0) && isDragging && draggableObject != null)
+        {
+            draggableObject.transform.position = mousePosition + offset; // マウスの位置に追従
+        }
+
+        // 左クリックを離したとき
+        if (Input.GetMouseButtonUp(0))
+        {
+            if (isDragging && draggableObject != null)
             {
-                OnClick(null);
+                isDragging = false; // ドラッグ中止
+
+                if (draggableObject.CompareTag("object") && currentPosition != startPosition) // 初期位置じゃなければ
+                {
+                    ResetPosition(); // 初期位置に戻す
+                }
+                draggableObject = null; // ドラッグ対象オブジェクトをリセット
             }
         }
     }
 
-    void OnClick(GameObject clickedObject) // 左クリックされた時
+    // 初期位置に戻る関数
+    void ResetPosition()
     {
-        if (clickedObject != null)
+        if (draggableObject != null)
         {
-            Debug.Log(clickedObject.name + " がクリックされた！（タグ: object）"); // クリックされたオブジェクトの名前をデバックする
-        }
-        else
-        {
-            Debug.Log("クリックが空を切った！！！");
+            draggableObject.transform.position = startPosition; // 初期位置に戻る
         }
     }
 }
