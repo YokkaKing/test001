@@ -2,14 +2,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class ChangeScene : MonoBehaviour {
+public class ChangeSceneScript : MonoBehaviour {
 
     public CheakGoalScript cheakGoalScript;
-
-    void Start () {
-        // CheakGoalScriptを持つオブジェクトを探して参照
-        cheakGoalScript = FindObjectOfType<CheakGoalScript>();
-    }
 
     public void LoadScene(string sceneName) {
         SceneManager.LoadScene(sceneName);
