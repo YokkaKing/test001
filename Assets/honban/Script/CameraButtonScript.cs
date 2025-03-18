@@ -1,7 +1,6 @@
 using UnityEngine;
 
-public class CameraButtonScript : MonoBehaviour
-{
+public class CameraButtonScript : MonoBehaviour {
     private SubCameraScript subCameraScript; // 他のScriptへの参照
 
     void Start() {
@@ -9,7 +8,10 @@ public class CameraButtonScript : MonoBehaviour
         subCameraScript = FindObjectOfType<SubCameraScript>();
     }
 
-    public void ConecctSetSubCameraObjectsActive() {
-        subCameraScript.SetSubCameraObjectsActive();
+    void OnMouseDown() {
+        // オブジェクトがクリックされたときに呼び出される
+        if (subCameraScript != null) {
+            subCameraScript.SetSubCameraObjectsActive();
+        }
     }
 }
