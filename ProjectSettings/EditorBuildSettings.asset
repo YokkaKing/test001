@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Test.unity
+    guid: 76cb5b89b00502f4698b324cea3be30d
+  - enabled: 1
     path: Assets/Scenes/Yokkaking/Yokkaking_union_001.unity
     guid: 82d6cf3a8c2a007429bcc4a81e62744c
   - enabled: 1
