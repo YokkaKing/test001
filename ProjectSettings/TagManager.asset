@@ -13,6 +13,7 @@ TagManager:
   - OBJECT
   - touch1
   - touch2
+  - camera
   layers:
   - Default
   - TransparentFX
