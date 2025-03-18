@@ -2525,10 +2525,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.0052083433
-    y: 0
-    width: 0.9895833
-    height: 1
+    x: 0
+    y: 0.050387025
+    width: 1
+    height: 0.89922595
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -2562,7 +2562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 1846635711}
-  aspectVec: {x: 1900, y: 1080}
+  aspectVec: {x: 1920, y: 1080}
 --- !u!114 &1846635713
 MonoBehaviour:
   m_ObjectHideFlags: 0
