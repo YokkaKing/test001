@@ -649,7 +649,7 @@ GameObject:
   - component: {fileID: 239929822}
   m_Layer: 0
   m_Name: "\u30AB\u30FC\u30C6\u30F3\u958B"
-  m_TagString: touch1
+  m_TagString: touch2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1081,7 +1081,7 @@ GameObject:
   - component: {fileID: 679032390}
   m_Layer: 0
   m_Name: "\u30AB\u30FC\u30C6\u30F3\u9589"
-  m_TagString: touch2
+  m_TagString: touch1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2368,8 +2368,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ead1718b3638d04d83a38045e95fb81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TOUCH1: {fileID: 239929820}
-  TOUCH2: {fileID: 679032389}
+  TOUCH1: {fileID: 679032389}
+  TOUCH2: {fileID: 239929820}
   action: 1
 --- !u!114 &1649389686
 MonoBehaviour:
