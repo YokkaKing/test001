@@ -9,7 +9,8 @@ public class CameraButtonScript : MonoBehaviour
         subCameraScript = FindObjectOfType<SubCameraScript>();
     }
 
-    public void ConecctSetSubCameraObjectsActive() {
+    public void ConecctSetSubCameraObjectsActive() 
+    {
         subCameraScript.SetSubCameraObjectsActive();
     }
 }
