@@ -683,7 +683,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -722,6 +722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tag1: test1
   tag2: test2
+  nextScene: test
   ShutterSound: {fileID: 8300000, guid: 898b3ee9f8a354f45aca59137e102b06, type: 3}
 --- !u!1 &1039988047
 GameObject:
