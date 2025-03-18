@@ -7,13 +7,18 @@ public class TouchController : MonoBehaviour
     public GameObject TOUCH1; // 表示・非表示を切り替えたいオブジェクト1
     public GameObject TOUCH2; // 表示・非表示を切り替えたいオブジェクト2
 
-    public bool action = false;
+    public bool action = false; // 初期設定
+
+    public AudioClip ShutterSound; // 音を鳴らすやつ
+    private AudioSource audioSource;
 
 
     void Start()
     {
         TOUCH1.gameObject.SetActive(true); // TOUCH1を表示
         TOUCH2.gameObject.SetActive(false); // TOUCH2を非表示
+
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
 
 
@@ -35,6 +40,9 @@ public class TouchController : MonoBehaviour
                     TOUCH1.gameObject.SetActive(false); // TOUCH1を非表示する
                     TOUCH2.gameObject.SetActive(true); // TOUCH2を表示する
 
+                    audioSource.clip = ShutterSound; // 音を鳴らす
+                    audioSource.Play(); // 音を鳴らす
+
                     if (action) // actionがtrueなら
                     {
                         VarScripts.ACTION = true; // ACTIONをtrueにする
@@ -45,6 +53,9 @@ public class TouchController : MonoBehaviour
                 {
                     TOUCH1.gameObject.SetActive(true); // TOUCH1を表示する
                     TOUCH2.gameObject.SetActive(false); // TOUCH2を非表示する
+
+                    audioSource.clip = ShutterSound; // 音を鳴らす
+                    audioSource.Play(); // 音を鳴らす
 
                     if (action)
                     {
