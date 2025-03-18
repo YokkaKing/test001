@@ -10,6 +10,9 @@ TagManager:
   - SubCameraChild
   - object
   - Action
+  - OBJECT
+  - touch1
+  - touch2
   layers:
   - Default
   - TransparentFX
