@@ -5,16 +5,11 @@ using UnityEngine;
 public class ACTIONsettei2 : MonoBehaviour
 {
 
-    public bool action = false;
+    public bool action2 = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        VarScripts.ACTION2 = action;
-    }
-
-    private void Update()
-    {
-        Debug.Log(VarScripts.ACTION2);
+        VarScripts.ACTION2 = action2;
     }
 }
