@@ -3,7 +3,13 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class ChangeScene : MonoBehaviour {
-    public static string NextSceneName;
+
+    public CheakGoalScript cheakGoalScript;
+
+    void Start () {
+        // CheakGoalScriptを持つオブジェクトを探して参照
+        cheakGoalScript = FindObjectOfType<CheakGoalScript>();
+    }
 
     public void LoadScene(string sceneName) {
         SceneManager.LoadScene(sceneName);
@@ -13,6 +19,11 @@ public class ChangeScene : MonoBehaviour {
         string currentSceneName = SceneManager.GetActiveScene().name;
         StartCoroutine(UnloadResultSceneAndReload(currentSceneName));
     }
+
+    public void NextScene() {
+        SceneManager.LoadScene(cheakGoalScript.nextScene);
+    }
+
     private IEnumerator UnloadResultSceneAndReload(string sceneName) {
         // ResultSceneをアンロード
         AsyncOperation unloadOperation = SceneManager.UnloadSceneAsync("ResultScene");

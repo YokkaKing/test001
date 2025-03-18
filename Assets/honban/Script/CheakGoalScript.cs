@@ -6,6 +6,7 @@ public class CheakGoalScript : MonoBehaviour
     //public string subCameraTag = "SubCamera"; // サブカメラのタグ名
     public string tag1 = "test1"; // チェックするタグ1
     public string tag2 = "test2"; // チェックするタグ2
+    public string nextScene = "test"; // チェックするタグ2
 
     private GameObject subCameraObject;
 

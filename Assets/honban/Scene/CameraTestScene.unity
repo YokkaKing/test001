@@ -495,6 +495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tag1: test1
   tag2: test2
+  nextScene: Stage2
   ShutterSound: {fileID: 8300000, guid: 898b3ee9f8a354f45aca59137e102b06, type: 3}
 --- !u!1 &967883240 stripped
 GameObject:
