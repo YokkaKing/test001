@@ -360,6 +360,7 @@ GameObject:
   - component: {fileID: 214985904}
   - component: {fileID: 214985906}
   - component: {fileID: 214985907}
+  - component: {fileID: 214985908}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -453,14 +454,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214985901}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da5183407450a514b945b628ad6016ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tag1: test1
   tag2: test2
-  nextScene: test
+  nextScene: Stage_3
   ShutterSound: {fileID: 8300000, guid: 898b3ee9f8a354f45aca59137e102b06, type: 3}
 --- !u!114 &214985907
 MonoBehaviour:
@@ -475,6 +476,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hyouji: {fileID: 1896783354}
+--- !u!114 &214985908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214985901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1295998e73da5434eb64f43fe98e441b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tag1: test1
+  tag2: test2
+  nextScene: Stage_3
+  ShutterSound: {fileID: 8300000, guid: 898b3ee9f8a354f45aca59137e102b06, type: 3}
 --- !u!1 &223761907
 GameObject:
   m_ObjectHideFlags: 0
@@ -2550,10 +2567,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0.050387025
-    width: 1
-    height: 0.89922595
+    x: 0.00024402142
+    y: 0
+    width: 0.99951196
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
