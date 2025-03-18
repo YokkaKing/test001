@@ -7,6 +7,8 @@ public class TouchController : MonoBehaviour
     public GameObject TOUCH1; // 表示・非表示を切り替えたいオブジェクト1
     public GameObject TOUCH2; // 表示・非表示を切り替えたいオブジェクト2
 
+    public bool action = false;
+
 
     void Start()
     {
@@ -32,6 +34,11 @@ public class TouchController : MonoBehaviour
                 {
                     TOUCH1.gameObject.SetActive(false); // TOUCH1を非表示する
                     TOUCH2.gameObject.SetActive(true); // TOUCH2を表示する
+
+                    if (action) // actionがtrueなら
+                    {
+                        VarScripts.ACTION = true; // ACTIONをtrueにする
+                    }
 
                 }// ヒットしたオブジェクトがtouch2のタグを持っていて　かつ　TOUCH2に設定されているオブジェクト　かつ　TOUCH1が非表示なら
                 else if (hit.collider.CompareTag("touch2") && hit.collider.gameObject == TOUCH2.gameObject && TOUCH1.activeSelf == false)
