@@ -45,6 +45,11 @@ public class TouchController : MonoBehaviour
                 {
                     TOUCH1.gameObject.SetActive(true); // TOUCH1‚ð•\Ž¦‚·‚é
                     TOUCH2.gameObject.SetActive(false); // TOUCH2‚ð”ñ•\Ž¦‚·‚é
+
+                    if (action)
+                    {
+                        VarScripts.ACTION = false; // ACTION‚ðfalse‚É‚·‚é
+                    }
                 }
             }
         }
