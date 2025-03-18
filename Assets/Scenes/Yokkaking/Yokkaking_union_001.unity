@@ -1685,6 +1685,7 @@ GameObject:
   - component: {fileID: 1115743741}
   - component: {fileID: 1115743743}
   - component: {fileID: 1115743742}
+  - component: {fileID: 1115743744}
   m_Layer: 0
   m_Name: Mouse
   m_TagString: Untagged
@@ -1734,6 +1735,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98c3c7374e8e7543ba81ff13a440a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1115743744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115743740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e07b3c7e2cf904197c1d89fdcc4f8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraOn: 0
 --- !u!4 &1171309522 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4704278697849109181, guid: 24b92407e6f222844ad4f51020910154, type: 3}
