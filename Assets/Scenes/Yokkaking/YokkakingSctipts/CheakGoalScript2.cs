@@ -17,12 +17,34 @@ public class CheakGoalScript2 : MonoBehaviour
         // サブカメラオブジェクトを取得
         subCameraObject = GameObject.FindGameObjectWithTag("SubCamera");
 
+        if (subCameraObject == null) {
+            Debug.LogError("SubCameraオブジェクトが見つかりませんでした。");
+        }
+        else {
+            Debug.Log("SubCameraオブジェクトが見つかりました。");
+        }
+
         audioSource = gameObject.AddComponent<AudioSource>();
         // SubCameraScriptコンポーネントを持つオブジェクトを検索して取得
         subCameraScript = FindObjectOfType<SubCameraScript>();
+
+        if (subCameraScript == null) {
+            Debug.LogError("SubCameraScriptが見つかりませんでした。");
+        }
+        else {
+            Debug.Log("SubCameraScriptが見つかりました。");
+        }
     }
 
     void Update() {
+        if (subCameraObject == null) {
+            // サブカメラオブジェクトがまだ見つかっていない場合、再度検索を試みる
+            subCameraObject = GameObject.FindGameObjectWithTag("SubCamera");
+            if (subCameraObject != null) {
+                Debug.Log("UpdateメソッドでSubCameraオブジェクトが見つかりました。");
+            }
+        }
+
         if (!SubCameraScript.isSubCameraActive) {
             if (Input.GetMouseButtonDown(1)) // 右クリックで
 {
