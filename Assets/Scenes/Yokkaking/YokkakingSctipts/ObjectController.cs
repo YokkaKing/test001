@@ -4,8 +4,23 @@ using UnityEngine;
 
 public class ObjectController : MonoBehaviour
 {
+    void Update()
+    {
+        if (VarScripts.isDragging == false) // ドラッグしていなかったら
+        {
+            if (CompareTag("OBJECT")) // 自身のタグがOBJECTだったら
+            {
+                VarScripts.ACTION = true; // アクションをオン
+                Destroy(gameObject); // このオブジェクトを消す
+            }
+            else if (CompareTag("object")) // 自身のタグがobjectだったら
+            {
+                VarScripts.ACTION = false; // アクションをオフ
+            }
+        }
 
-    public static bool ACTION = false;
+        Debug.Log(VarScripts.ACTION);
+    }
 
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -15,7 +30,6 @@ public class ObjectController : MonoBehaviour
             if (CompareTag("object")) // このオブジェクトのタグがobjcetだったら
             {
                 gameObject.tag = "OBJECT"; // タグをOBJECTに変更
-                ACTION = true;
             }
         }
     }
@@ -27,7 +41,6 @@ public class ObjectController : MonoBehaviour
             if (CompareTag("OBJECT")) // このオブジェクトのタグがOBJECTだったら
             {
                 gameObject.tag = "object"; // タグをobjectに戻す
-                ACTION = false;
             }
         }
     }
