@@ -358,7 +358,6 @@ GameObject:
   - component: {fileID: 214985902}
   - component: {fileID: 214985905}
   - component: {fileID: 214985904}
-  - component: {fileID: 214985906}
   - component: {fileID: 214985907}
   - component: {fileID: 214985908}
   m_Layer: 0
@@ -447,22 +446,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &214985906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214985901}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da5183407450a514b945b628ad6016ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tag1: test1
-  tag2: test2
-  nextScene: Stage_3
-  ShutterSound: {fileID: 8300000, guid: 898b3ee9f8a354f45aca59137e102b06, type: 3}
 --- !u!114 &214985907
 MonoBehaviour:
   m_ObjectHideFlags: 0
