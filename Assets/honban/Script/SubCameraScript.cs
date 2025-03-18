@@ -1,11 +1,8 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SubCameraScript : MonoBehaviour {
     private GameObject subCameraObject;
     public static bool isSubCameraActive;
-
-    public Button toggleButton; // ボタンを指定
 
     void Start() {
         // タグを使ってすべてのカメラオブジェクトを取得

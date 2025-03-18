@@ -10,8 +10,13 @@ public class CameraButtonScript : MonoBehaviour {
 
     void OnMouseDown() {
         // オブジェクトがクリックされたときに呼び出される
+        Debug.Log("オブジェクトがクリックされました");
+
         if (subCameraScript != null) {
             subCameraScript.SetSubCameraObjectsActive();
+            Debug.Log("SetSubCameraObjectsActiveが呼び出されました");
+        } else {
+            Debug.LogError("subCameraScriptが見つかりませんでした");
         }
     }
 }
