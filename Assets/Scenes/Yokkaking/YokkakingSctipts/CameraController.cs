@@ -30,10 +30,13 @@ public class CameraController : MonoBehaviour
 
             if (hit.collider.CompareTag("camera") && cameraOn == false) // 触ったオブジェクトがcamera　かつ　cameraOnがtrueなら
             {
+                cameraOn = true;
                 subCameraScript.SetSubCameraObjectsActive(); // アクティブ
             }
-            else if (hit.collider.CompareTag("camera") && cameraOn)
+            else if (hit.collider.CompareTag("camera") && cameraOn == true)
             {
+                cameraOn = false;
+                Debug.Log("aa");
                 subCameraScript.SetSubCameraObjectsActive(); // アクティブ
             }
         }
