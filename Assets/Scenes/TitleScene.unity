@@ -303,6 +303,7 @@ GameObject:
   - component: {fileID: 564461441}
   - component: {fileID: 564461440}
   - component: {fileID: 564461443}
+  - component: {fileID: 564461444}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -435,6 +436,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: StageSelect
+--- !u!114 &564461444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564461439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9b399bd6721ccb4abc94e49fb1dc7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundPrefab: {fileID: 7669872541552988845, guid: df8d51818db582546936cd4d2d27c107, type: 3}
 --- !u!1 &880280151
 GameObject:
   m_ObjectHideFlags: 0
