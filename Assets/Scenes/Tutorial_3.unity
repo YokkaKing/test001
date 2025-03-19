@@ -2356,7 +2356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5454a690ad1036940ab60a2ebb2cb5fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShutterSound: {fileID: 0}
+  soundPrefab: {fileID: 4963973693971862883, guid: 9e22017e3bd4ca3499550f383e6d01e7, type: 3}
 --- !u!50 &1798985542
 Rigidbody2D:
   serializedVersion: 4
