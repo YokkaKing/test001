@@ -1,17 +1,17 @@
 using UnityEngine;
 
-public class sound : MonoBehaviour
+public class sound2 : MonoBehaviour
 {
-    public AudioClip sound1; // 再生する音
+    public AudioClip sound; // 再生する音
     private AudioSource audioSource;
 
     void Start()
     {
         audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.clip = sound1;
+        audioSource.clip = sound;
         audioSource.Play();
 
         // 音の長さに応じてオブジェクトを削除
-        Destroy(gameObject, sound1.length);
+        Destroy(gameObject, sound.length);
     }
 }
