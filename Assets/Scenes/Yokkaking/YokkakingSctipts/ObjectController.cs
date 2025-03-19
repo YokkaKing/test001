@@ -15,9 +15,9 @@ public class ObjectController : MonoBehaviour
             {
                 VarScripts.ACTION = true; // アクションをオン
 
-                Destroy(gameObject); // このオブジェクトを消す
-
                 Instantiate(soundPrefab, transform.position, Quaternion.identity);
+
+                Destroy(gameObject); // このオブジェクトを消す
             }
             else if (CompareTag("object")) // 自身のタグがobjectだったら
             {
