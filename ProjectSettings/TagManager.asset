@@ -19,6 +19,8 @@ TagManager:
   - Next
   - touch3
   - touch4
+  - NEXTSTAGE
+  - CLEAR
   layers:
   - Default
   - TransparentFX
