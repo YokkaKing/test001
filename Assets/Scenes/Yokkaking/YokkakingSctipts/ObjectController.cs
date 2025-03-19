@@ -4,13 +4,27 @@ using UnityEngine;
 
 public class ObjectController : MonoBehaviour
 {
+    public AudioClip ShutterSound; // 音を鳴らすやつ
+    private AudioSource audioSource;
+
+
+    void Start()
+    {
+        audioSource = gameObject.AddComponent<AudioSource>();
+    }
+
+
     void Update()
     {
         if (VarScripts.isDragging == false) // ドラッグしていなかったら
         {
             if (CompareTag("OBJECT")) // 自身のタグがOBJECTだったら
             {
+                audioSource.clip = ShutterSound; // 音を鳴らす
+                audioSource.Play(); // 音を鳴らす
+
                 VarScripts.ACTION = true; // アクションをオン
+
                 Destroy(gameObject); // このオブジェクトを消す
             }
             else if (CompareTag("object")) // 自身のタグがobjectだったら

@@ -723,6 +723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5454a690ad1036940ab60a2ebb2cb5fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShutterSound: {fileID: 8300000, guid: d336909ebc663464aa5083f3aac362da, type: 3}
 --- !u!1 &240958472
 GameObject:
   m_ObjectHideFlags: 0
@@ -2863,9 +2864,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.00024402142
+    x: 0
     y: 0
-    width: 0.99951196
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
