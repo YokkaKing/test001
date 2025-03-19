@@ -2,14 +2,24 @@ using UnityEngine;
 
 public class SingletonObject : MonoBehaviour {
     private static SingletonObject instance;
+    private AudioSource audioSource;
+
+    public AudioClip bgmClip; // BGMの音源
 
     void Awake() {
-        if (instance == null) {
-            instance = this;
-            DontDestroyOnLoad(gameObject);  // シーン間でオブジェクトを保持する
+        if (instance != null) {
+            Destroy(gameObject); // すでに存在する場合は新しいものを削除
+            return;
         }
-        else {
-            Destroy(gameObject);  // 既に存在する場合は新しいオブジェクトを破棄
-        }
+
+        // インスタンスを保持
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+
+        // AudioSourceを追加
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = bgmClip;
+        audioSource.loop = true; // ループ再生
+        audioSource.Play();
     }
 }
