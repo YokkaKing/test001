@@ -652,7 +652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tag1: test1
   tag2: test2
-  nextScene: Stage_3
+  nextScene: Stage_1
   ShutterSound: {fileID: 8300000, guid: 898b3ee9f8a354f45aca59137e102b06, type: 3}
 --- !u!114 &387066888
 MonoBehaviour:
@@ -2356,6 +2356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5454a690ad1036940ab60a2ebb2cb5fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShutterSound: {fileID: 0}
 --- !u!50 &1798985542
 Rigidbody2D:
   serializedVersion: 4
@@ -3201,9 +3202,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.00024402142
     y: 0
-    width: 1
+    width: 0.99951196
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
